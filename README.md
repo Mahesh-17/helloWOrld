@@ -25,6 +25,7 @@ docker run -p 5051:8081 worldservice
 ## Pushing images to DockerHub:
 
 Login to Docker - docker login
+
 Check the Images - docker images
 
 ## Changing the Img Name :
