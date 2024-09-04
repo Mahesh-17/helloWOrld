@@ -27,7 +27,7 @@ docker run -p 5051:8081 worldservice
 Login to Docker - docker login
 Check the Images - docker images
 
-Changing the Img Name -
+## Changing the Img Name :
 
 docker tag helloservice:latest username/helloservice
 
@@ -41,7 +41,7 @@ docker push username/worldservice
 
 start the minikube - minikube start
 
-Apply K8s Manifests -
+## Apply K8s Manifests:
 
 kubectl apply -f hello-deployment.yaml
 
@@ -54,17 +54,21 @@ kubectl apply -f world-service.yaml
 ## Check the status of the deployment:
 
 kubectl get pods
+
 kubectl get deployments
+
 kubectl get services
 
 ## Access the service using /hello and /world endpoint:
 
 minikube service hello-service
+
 minikube service world-service
 
 ## Testing Script for Hello Service and World Service:
 
 curl $(minikube service hello-service --url)/hello
+
 curl $(minikube service world-service --url)/world
 
 
