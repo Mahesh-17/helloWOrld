@@ -3,6 +3,7 @@ Creating Hello and World Microservices using Node.js, Docker and K8s
 
 ## Project Structure:
 `hello-service/`: Contains the Hello Service code, Dockerfile and Kubernates(K8s) manifests.
+
 `world-service/`: Contains the World Service code, Dockerfile and Kubernates(K8s) manifests.
 
 ## Prerequisites:
