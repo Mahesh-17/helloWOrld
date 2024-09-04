@@ -24,19 +24,22 @@ docker run -p 5051:8081 worldservice
 
 Login to Docker - docker login
 Check the Images - docker images
-Changing the Img Name - docker tag helloservice:latest username/helloservice
-                        docker push username/helloservice
-                        docker tag worldservice:latest username/worldservice
-                        docker push username/worldservice
+
+Changing the Img Name -
+docker tag helloservice:latest username/helloservice
+docker push username/helloservice
+docker tag worldservice:latest username/worldservice
+docker push username/worldservice
                         
 ## Deploying on Kubernates using Minikube:
 
 start the minikube - minikube start
 
-Apply K8s Manifests - kubectl apply -f hello-deployment.yaml
-                      kubectl apply -f hello-service.yaml
-                      kubectl apply -f world-deployment.yaml
-                      kubectl apply -f world-service.yaml
+Apply K8s Manifests -
+kubectl apply -f hello-deployment.yaml
+kubectl apply -f hello-service.yaml
+kubectl apply -f world-deployment.yaml
+kubectl apply -f world-service.yaml
 
 ## Check the status of the deployment:
 
