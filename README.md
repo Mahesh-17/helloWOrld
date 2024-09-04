@@ -11,6 +11,7 @@ Install git,docker and minikube on your local computer
 
 ## Running Local Microservices:
 node hello.js - Running on the port 8080
+
 node world.js - Running on the port 8081
 
 ## Building and Running Docker Images:
@@ -18,7 +19,7 @@ node world.js - Running on the port 8081
 docker build -t helloservice:latest .   
 docker run -p 5050:8080 helloservice 
 
-docker build -t worldservice:latest .   
+docker build -t worldservice:latest .  
 docker run -p 5051:8081 worldservice 
 
 ## Pushing images to DockerHub:
