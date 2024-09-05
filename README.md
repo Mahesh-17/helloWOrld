@@ -24,7 +24,7 @@ docker run -p 5050:8080 helloservice
 docker build -t worldservice:latest .  
 docker run -p 5051:8081 worldservice 
 
-## Pushing images to DockerHub:
+## Logging to docker and checking the images:
 
 Login to Docker - docker login
 
@@ -89,12 +89,15 @@ Output will be shown as Hello, World !
 
 ## Output Screenshots:
 
+a) Output at /hello endpoint for hello-service:
 
 <img width="1051" alt="Screenshot 2024-09-04 at 6 37 54 PM" src="https://github.com/user-attachments/assets/8b947816-fc70-4b74-87c1-b5a4e000f063">
 
+b) Output at /world endpoint for world-service:
 
 <img width="1048" alt="Screenshot 2024-09-04 at 6 38 41 PM" src="https://github.com/user-attachments/assets/b5c45d72-7e54-4f25-8a81-e719b5597dc6">
 
+c) Output at /test endpoint for test-service:
 
 <img width="1043" alt="Screenshot 2024-09-04 at 6 39 15 PM" src="https://github.com/user-attachments/assets/928cad2c-ebd3-4cbb-a255-9b9a458392b6">
 
