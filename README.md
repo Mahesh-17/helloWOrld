@@ -6,8 +6,10 @@ Creating Hello and World Microservices using Node.js, Docker and K8s
 
 `world-service/`: Contains the World Service code, Dockerfile and Kubernates(K8s) manifests.
 
+`test-service/`: Contains the Test Service code, Dockerfile and Kubernates(K8s) manifests.
+
 ## Prerequisites:
-Install git,docker and minikube on your local computer
+Install git, docker and minikube on your local computer
 
 ## Running Local Microservices:
 node hello.js - Running on the port 8080
@@ -28,15 +30,16 @@ Login to Docker - docker login
 
 Check the Images - docker images
 
-## Changing the Img Name :
+## Pushing the docker image to docker hub:
 
-docker tag helloservice:latest username/helloservice
+docker tag helloservice:latest mahesh1710/helloservice
 
-docker push username/helloservice
+docker push mahesh1710/helloservice
 
-docker tag worldservice:latest username/worldservice
+docker tag worldservice:latest mahesh1710/worldservice
 
-docker push username/worldservice
+docker push mahesh1710/worldservice
+
                         
 ## Deploying on Kubernates using Minikube:
 
@@ -66,11 +69,35 @@ minikube service hello-service
 
 minikube service world-service
 
-## Testing Script for Hello Service and World Service:
+## Testing Service for combining Hello Service and World Service:
 
-curl $(minikube service hello-service --url)/hello
+Create a test-service similar to hello-service or world-service and deploy it on K8s
 
-curl $(minikube service world-service --url)/world
+Run the both hello-service and world-service using minikube
+
+minikube service test-service
+
+Output will be shown as Hello, World !
+
+## Docker Images link on Docker hub:
+
+[mahesh1710/helloservice](https://hub.docker.com/repository/docker/mahesh1710/testservice/general)
+
+[mahesh1710/worldservice](https://hub.docker.com/repository/docker/mahesh1710/worldservice/general)
+
+[mahesh1710/testservice](https://hub.docker.com/repository/docker/mahesh1710/testservice/general)
+
+## Output Screenshots:
+
+
+<img width="1051" alt="Screenshot 2024-09-04 at 6 37 54 PM" src="https://github.com/user-attachments/assets/8b947816-fc70-4b74-87c1-b5a4e000f063">
+
+
+<img width="1048" alt="Screenshot 2024-09-04 at 6 38 41 PM" src="https://github.com/user-attachments/assets/b5c45d72-7e54-4f25-8a81-e719b5597dc6">
+
+
+<img width="1043" alt="Screenshot 2024-09-04 at 6 39 15 PM" src="https://github.com/user-attachments/assets/928cad2c-ebd3-4cbb-a255-9b9a458392b6">
+
 
 
 ## This README.md file provides clear overview on which applications need to be set-up and how to run the services.
