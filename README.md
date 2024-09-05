@@ -32,6 +32,7 @@ Check the Images - docker images
 
 ## Pushing the docker image to docker hub:
 
+```
 docker tag helloservice:latest mahesh1710/helloservice
 
 docker push mahesh1710/helloservice
@@ -39,6 +40,7 @@ docker push mahesh1710/helloservice
 docker tag worldservice:latest mahesh1710/worldservice
 
 docker push mahesh1710/worldservice
+```
 
                         
 ## Deploying on Kubernates using Minikube:
