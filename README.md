@@ -106,7 +106,7 @@ c) Output at /test endpoint for test-service:
 
 
 
-## This README.md file provides clear overview on which applications need to be set-up and how to run the services.
+## This README.md file provides clear overview on which applications need to be set-up and how to execute the services.
 
 
 
