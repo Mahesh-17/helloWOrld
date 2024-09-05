@@ -12,23 +12,23 @@ Creating Hello and World Microservices using Node.js, Docker and K8s
 Install git, docker and minikube on your local computer
 
 ## Running Local Microservices:
-node hello.js - Running on the port 8080
+```node hello.js``` - Running on the port 8080
 
-node world.js - Running on the port 8081
+```node world.js``` - Running on the port 8081
 
 ## Building and Running Docker Images:
 
-docker build -t helloservice:latest .   
-docker run -p 5050:8080 helloservice 
+```docker build -t helloservice:latest .```   
+```docker run -p 5050:8080 helloservice``` 
 
-docker build -t worldservice:latest .  
-docker run -p 5051:8081 worldservice 
+```docker build -t worldservice:latest .```  
+```docker run -p 5051:8081 worldservice``` 
 
 ## Logging to docker and checking the images:
 
-Login to Docker - docker login
+Login to Docker - ```docker login```
 
-Check the Images - docker images
+Check the Images - ```docker images```
 
 ## Pushing the docker image to docker hub:
 
@@ -36,7 +36,8 @@ Check the Images - docker images
 docker tag helloservice:latest mahesh1710/helloservice
 
 docker push mahesh1710/helloservice
-
+```
+```
 docker tag worldservice:latest mahesh1710/worldservice
 
 docker push mahesh1710/worldservice
@@ -45,31 +46,31 @@ docker push mahesh1710/worldservice
                         
 ## Deploying on Kubernates using Minikube:
 
-start the minikube - minikube start
+start the minikube - ```minikube start```
 
 ## Apply K8s Manifests:
 
-kubectl apply -f hello-deployment.yaml
+```kubectl apply -f hello-deployment.yaml```
 
-kubectl apply -f hello-service.yaml
+```kubectl apply -f hello-service.yaml```
 
-kubectl apply -f world-deployment.yaml
+```kubectl apply -f world-deployment.yaml```
 
-kubectl apply -f world-service.yaml
+```kubectl apply -f world-service.yaml```
 
 ## Check the status of the deployment:
 
-kubectl get pods
+```kubectl get pods```
 
-kubectl get deployments
+```kubectl get deployments```
 
-kubectl get services
+```kubectl get services```
 
 ## Access the service using /hello and /world endpoint:
 
-minikube service hello-service
+```minikube service hello-service```
 
-minikube service world-service
+```minikube service world-service```
 
 ## Testing Service for combining Hello Service and World Service:
 
@@ -77,7 +78,7 @@ Create a test-service similar to hello-service or world-service and deploy it on
 
 Run the both hello-service and world-service using minikube
 
-minikube service test-service
+```minikube service test-service```
 
 Output will be shown as Hello, World !
 
