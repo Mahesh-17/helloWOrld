@@ -1,4 +1,4 @@
-# helloWOrld
+# CMPE-272 - Assignment1 : helloWOrld
 Creating Hello and World Microservices using Node.js, Docker and K8s
 
 ## Project Structure:
